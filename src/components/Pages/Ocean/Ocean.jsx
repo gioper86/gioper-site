@@ -65,9 +65,8 @@ const Ocean = () => {
         <Container maxWidth="md">
           <div className={classes.heroTitle}>
             <Typography component="h6" variant="h6">Underwater blog</Typography>
-            <Typography component="subtitle2" align="center">   
-              Below the surface of our oceans there's a hidden, beautiful world which fascinates me a lot, and the way I like to explore it is by freediving.
-              <br />In this blog I share my adventures underwater and talk about the amazing creatures and scenaries I come across. I hope you like it!
+            <Typography component="subtitle2" align="center">
+              Some kind of intro on the blog   
             </Typography>
           </div>
         </Container>
