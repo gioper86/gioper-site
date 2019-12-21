@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
-import hero from './../../../images/hero.jpg';
+import hero from './../../../images/elnido.jpg';
 import Articles from './../../Articles/Articles';
 
 const useStyles = makeStyles({
