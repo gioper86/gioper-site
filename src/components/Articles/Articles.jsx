@@ -47,7 +47,7 @@ const Articles = () => {
           </CardContent>
         </CardActionArea>
         <CardActions>
-        <List component="nav" aria-label="main mailbox folders">
+          <List component="nav" aria-label="main mailbox folders">
             <ListItem button>
               <ListItemIcon>
                 <RoomIcon />
@@ -64,7 +64,6 @@ const Articles = () => {
         </CardActions>
       </Card>
     </Grid>
-
   );
 
   return (
