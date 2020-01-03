@@ -43,7 +43,7 @@ const useStyles = makeStyles({
 const Post = () => {
   const classes = useStyles();
   
-  const markdown = 'ciao **ciao** e ciao';
+  const markdown = 'ciao \n\n **ciao** e ciao';
   return (
     <React.Fragment>
       <CssBaseline />
@@ -89,7 +89,7 @@ const Post = () => {
               </div>
             </Box>
             <Typography component="body1"> 
-               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur unde suscipit, quam beatae rerum inventore consectetur, neque doloribus, cupiditate numquam dignissimos laborum fugiat deleniti? Eum quasi quidem quibusdam.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur unde suscipit, quam beatae rerum inventore consectetur, neque doloribus, cupiditate numquam dignissimos laborum fugiat deleniti? Eum quasi quidem quibusdam.
               <ReactMarkdown
                 source={markdown}
                 escapeHtml={false}

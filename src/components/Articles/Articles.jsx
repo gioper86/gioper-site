@@ -14,6 +14,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import RoomIcon from '@material-ui/icons/Room';
 import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
+import { posts } from '../../services/dataService';
 
 const useStyles = makeStyles({
   root: {
@@ -24,9 +25,9 @@ const useStyles = makeStyles({
   
 const Articles = () => {
   const classes = useStyles();
-  const posts = ['post1', 'post2', 'post3', 'post4', 'post5'];
+  //const posts = ['post1', 'post2', 'post3', 'post4', 'post5'];
   const listPosts = posts.map((post) =>
-    <Grid item md={6} xs={12} key={post}>
+    <Grid item md={6} xs={12} key={post.id}>
       <Card className={classes.card}>
         <CardActionArea>
           <CardMedia
@@ -38,7 +39,7 @@ const Articles = () => {
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
-              {post}
+              {post.title}
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
               Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
