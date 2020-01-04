@@ -14,6 +14,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import RoomIcon from '@material-ui/icons/Room';
 import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
+import { Link } from "react-router-dom";
 import { posts } from '../../services/dataService';
 
 const useStyles = makeStyles({
@@ -25,41 +26,40 @@ const useStyles = makeStyles({
   
 const Articles = () => {
   const classes = useStyles();
-  //const posts = ['post1', 'post2', 'post3', 'post4', 'post5'];
   const listPosts = posts.map((post) =>
     <Grid item md={6} xs={12} key={post.id}>
       <Card className={classes.card}>
-        <CardActionArea>
-          <CardMedia
-            component="img"
-            alt="Contemplative Reptile"
-            height="140"
-            image="/static/images/cards/contemplative-reptile.jpg"
-            title="Contemplative Reptile"
-          />
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
-              {post.title}
-            </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
-              Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-              across all continents except Antarctica
-            </Typography>
-          </CardContent>
-        </CardActionArea>
+        <Link to={`/ocean/${post.id}`}>
+          <CardActionArea>
+            <CardMedia
+              component="img"
+              alt=""
+              height="140"
+              image={post.thumbnail}
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="h2">
+                {post.title}
+              </Typography>
+              <Typography variant="body2" color="textSecondary" component="p">
+                {post.intro}
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+        </Link>
         <CardActions>
           <List component="nav" aria-label="main mailbox folders">
             <ListItem button>
               <ListItemIcon>
                 <RoomIcon />
               </ListItemIcon>
-              <ListItemText primary="Caletta Rovaglioso, Palmi, Italy" />
+              <ListItemText primary={post.location.name} />
             </ListItem>
             <ListItem button>
               <ListItemIcon>
                 <CalendarTodayIcon />
               </ListItemIcon>
-              <ListItemText primary="16 August 2019" />
+              <ListItemText primary={post.date} />
             </ListItem>
           </List>
         </CardActions>

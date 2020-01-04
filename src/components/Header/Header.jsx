@@ -34,10 +34,10 @@ const Header = () => {
           Ocean lover <span role="img">&#128044;</span>
         </Typography>
         <Typography>
-          <Link href="" className={classes.link}>
+          <Link href="/" className={classes.link}>
             About
           </Link>
-          <Link href="" className={classes.link}>
+          <Link href="/ocean" className={classes.link}>
             Underwater blog
           </Link>
           <Link href="" className={classes.link}>
@@ -46,7 +46,6 @@ const Header = () => {
         </Typography>
       </Container>
     </React.Fragment>    
-
   );
 }
 

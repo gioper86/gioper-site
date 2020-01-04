@@ -15,6 +15,8 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import RoomIcon from '@material-ui/icons/Room';
 import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
+import { useParams } from "react-router-dom";
+
 // import Marker from 'pigeon-marker'
 // import Overlay from 'pigeon-overlay'
 
@@ -42,7 +44,8 @@ const useStyles = makeStyles({
 
 const Post = () => {
   const classes = useStyles();
-  
+  const { postId } = useParams();
+
   const markdown = 'ciao \n\n **ciao** e ciao';
   return (
     <React.Fragment>
@@ -53,7 +56,7 @@ const Post = () => {
       <Container maxWidth="md">
         <Grid container spacing={3}>
           <Grid item xs={12}>
-            <Typography component="h4" variant="h4" align="center" className={classes.title}>Title</Typography>
+            <Typography component="h4" variant="h4" align="center" className={classes.title}>Title {postId}</Typography>
           </Grid>
           <Grid item sm={8} xs={12}>
             <List component="nav" aria-label="main mailbox folders">
