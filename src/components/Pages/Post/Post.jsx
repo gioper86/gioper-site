@@ -34,8 +34,6 @@ const useStyles = makeStyles({
   }
 });
 
-
-
 const VideoBox = (props) => {
   const classes = useStyles();
 
