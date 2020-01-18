@@ -36,6 +36,7 @@
   "devDependencies": {
     "chalk": "^3.0.0",
     "progress-bar-webpack-plugin": "^1.12.1",
+    "shortid": "^2.2.15",
     "webpack-bundle-analyzer": "^3.6.0"
   }
 }

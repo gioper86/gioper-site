@@ -1,12 +1,12 @@
 export const posts = [
   {
-    id: 1,
+    id: "JX0KOB8q",
     title: "White gorgonian",
     location: {
       name: "Sa Tuna, Costa Brava, Spain",
       coordinates: [41.960583, 3.229857]
     },
-    intro: "some into in **markdown** here",
+    intro: "some intro in **markdown** here",
     date: "15/10/2019",
     publishingDate: "02/01/2020",
     thumbnail: "url-to-thumbnail",
@@ -23,13 +23,13 @@ export const posts = [
     ]
   },
   {
-    id: 2,
+    id: "vrcFhczN",
     title: "Looking for Pinna Nobilis",
     location: {
       name: "Marinella, Palmi, Italy",
       coordinates: [38.351650, 15.835617]
     },
-    intro: "some into in **markdown** here",
+    intro: "some intro in **markdown** here",
     date: "20/08/2019",
     publishingDate: "03/01/2020",
     thumbnail: "url-to-thumbnail",
@@ -46,3 +46,13 @@ export const posts = [
     ]
   },  
 ];
+
+export const getPostById = (postId) => {
+  for (let i = 0; i < posts.length; i++) {
+    const post = posts[i];
+    if(post.id === postId) {
+      return post;
+    }
+  }
+  throw new Error("Post not found");
+}
