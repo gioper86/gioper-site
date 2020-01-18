@@ -13,13 +13,17 @@ export const posts = [
     content: [
       {
         type: "video",
-        url: "someurl",
-        description: "some description",
+        parameters: {
+          url: "https://www.youtube.com/embed/QlAJSdJIBqU",
+          description: "some description",
+        }
       },
       {
         type: "markdown",
-        text: "Lorem ipsum **dolor** sit amet, **consectetur** adipisicing elit. \n\nQuos blanditiis tenetur unde suscipit, quam beatae rerum inventore consectetur, neque doloribus, cupiditate numquam dignissimos laborum fugiat deleniti? Eum quasi quidem quibusdam.",
-      },    
+        parameters: {
+          text: "Lorem ipsum **dolor** sit amet, **consectetur** adipisicing elit. \n\nQuos blanditiis tenetur unde suscipit, quam beatae rerum inventore consectetur, neque doloribus, cupiditate numquam dignissimos laborum fugiat deleniti? Eum quasi quidem quibusdam.",
+        },
+      },
     ]
   },
   {
@@ -36,15 +40,19 @@ export const posts = [
     content: [
       {
         type: "video",
-        url: "someurl",
-        description: "some description",
+        parameters: {
+          url: "https://www.youtube.com/embed/QlAJSdJIBqU",
+          description: "some description",
+        }
       },
       {
         type: "markdown",
-        text: "Lorem ipsum **dolor** sit amet, **consectetur** adipisicing elit. \n\nQuos blanditiis tenetur unde suscipit, quam beatae rerum inventore consectetur, neque doloribus, cupiditate numquam dignissimos laborum fugiat deleniti? Eum quasi quidem quibusdam.",
-      },    
+        parameters: {
+          text: "Lorem ipsum **dolor** sit amet, **consectetur** adipisicing elit. \n\nQuos blanditiis tenetur unde suscipit, quam beatae rerum inventore consectetur, neque doloribus, cupiditate numquam dignissimos laborum fugiat deleniti? Eum quasi quidem quibusdam.",
+        }, 
+      },
     ]
-  },  
+  },
 ];
 
 export const getPostById = (postId) => {

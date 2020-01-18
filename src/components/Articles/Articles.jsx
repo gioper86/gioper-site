@@ -22,6 +22,11 @@ const useStyles = makeStyles({
     flexGrow: 1,
     marginTop: '20px',
   },
+
+  cardLinks: {
+    color: 'inherit',
+    textDecoration: 'none',
+  }
 });
   
 const Articles = () => {
@@ -29,7 +34,7 @@ const Articles = () => {
   const listPosts = posts.map((post) =>
     <Grid item md={6} xs={12} key={post.id}>
       <Card className={classes.card}>
-        <Link to={`/ocean/${post.id}`}>
+        <Link to={`/ocean/${post.id}`} className={classes.cardLinks}>
           <CardActionArea>
             <CardMedia
               component="img"
