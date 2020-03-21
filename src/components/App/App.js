@@ -4,17 +4,27 @@ import Home from '../Pages/Home/Home';
 import Ocean from '../Pages/Ocean/Ocean';
 import Post from '../Pages/Post/Post';
 import ScrollToTop from '../ScrollToTop/ScrollToTop';
+import { createMuiTheme } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/styles';
+
+const theme = createMuiTheme({
+  typography: {
+    fontSize: 16,
+  }
+});
 
 const  App = () => {
   return (
-    <Router>
-      <ScrollToTop />
-      <Route exact path="/" component={Home} />
-      <Route exact path="/ocean" component={Ocean} />
-        <Route path="/ocean/:postId">
-          <Post />
-        </Route>      
-    </Router>  
+    <ThemeProvider theme={theme}>
+      <Router>
+        <ScrollToTop />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/ocean" component={Ocean} />
+          <Route path="/ocean/:postId">
+            <Post />
+          </Route>
+      </Router>
+    </ThemeProvider>
   );
 }
  

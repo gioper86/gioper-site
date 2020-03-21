@@ -29,7 +29,8 @@ export default function PostHeader(props) {
   return (
     <React.Fragment>
       <Grid item xs={12}>
-        <Typography component="h4" variant="h4" align="center" className={classes.title}>{post.title}</Typography>
+        <Typography component="h4" variant="h4" align="left" className={classes.title}>{post.title}</Typography>
+        <Typography component="h6" variant="h6"> {post.intro} </Typography>        
       </Grid>
       <Grid item sm={8} xs={12}>
         <List component="nav" aria-label="main mailbox folders">
@@ -46,9 +47,6 @@ export default function PostHeader(props) {
             <ListItemText primary={post.date} />
           </ListItem>
         </List>
-        <Typography component="body1"> 
-          {post.intro}
-        </Typography>
       </Grid>      
       <Grid item sm={4} xs={12} className={classes.mapBox}>
           <Map center={[50.879, 4.6997]} zoom={3}>

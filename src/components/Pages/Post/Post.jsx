@@ -66,8 +66,8 @@ const Post = () => {
   const { postId } = useParams();
   const post = getPostById(postId); // TODO: handle error when postId is not found
   const contentComponents = post.content.map(item=> {
-    const Component = contentTypeToComponent[item.type];
-    return <Component {...item.parameters} />
+    const PostComponent = contentTypeToComponent[item.type];
+    return <PostComponent {...item.parameters} />
   });
 
   return (
@@ -81,7 +81,6 @@ const Post = () => {
           <PostHeader post={post}/>
           <Grid item xs={12}>
             {contentComponents}
-
           </Grid>
         </Grid>
       </Container>      
