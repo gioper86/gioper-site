@@ -28,7 +28,7 @@ const Header = () => {
       <Container maxWidth="md" className={classes.intro}>
         <Typography component="h4" variant="h4" align="center">Giovanni Perna</Typography>
         <Typography component="subtitle2" align="center"> 
-          Engineering manager @ Skyscanner <span role="img">&#128745;</span>
+          Software engineering manager <span role="img">&#128745;</span>
         </Typography>
         <Typography component="subtitle2" align="center" display="block"> 
           Ocean lover <span role="img">&#128044;</span>

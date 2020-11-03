@@ -31,7 +31,7 @@ const Ocean = () => {
     <React.Fragment>
       <CssBaseline />
       <Header />
-      <div className={classes.heroImage}>
+      {/* <div className={classes.heroImage}>
         <Container maxWidth="md">
           <div className={classes.heroTitle}>
             <Typography component="h6" variant="h6">Underwater blog</Typography>
@@ -40,7 +40,7 @@ const Ocean = () => {
             </Typography>
           </div>
         </Container>
-      </div>
+      </div> */}
       <Articles />
     </React.Fragment>    
   );
