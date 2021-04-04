@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Home from '../Pages/Home/Home';
 import Ocean from '../Pages/Ocean/Ocean';
 import Post from '../Pages/Post/Post';
+import Blog from '../Pages/Blog/Blog';
 import ScrollToTop from '../ScrollToTop/ScrollToTop';
 import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
@@ -19,6 +20,7 @@ const  App = () => {
       <Router>
         <ScrollToTop />
         <Route exact path="/" component={Home} />
+        <Route exact path="/blog" component={Blog} />
         <Route exact path="/ocean" component={Ocean} />
           <Route path="/ocean/:postId">
             <Post />

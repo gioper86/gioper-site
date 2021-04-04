@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
+import Divider from '@material-ui/core/Divider';
 
 const useStyles = makeStyles({
   intro: {
@@ -25,26 +26,32 @@ const Header = () => {
   return (
     <React.Fragment>
       <CssBaseline />
-      <Container maxWidth="md" className={classes.intro}>
+      {/* <Container maxWidth="md" className={classes.intro}> */}
+      <div>
         <Typography component="h4" variant="h4" align="center">Giovanni Perna</Typography>
-        <Typography component="subtitle2" align="center"> 
+        <Typography component="subtitle2" align="center" display="block"> 
           Software engineering manager <span role="img">&#128745;</span>
         </Typography>
         <Typography component="subtitle2" align="center" display="block"> 
           Ocean lover <span role="img">&#128044;</span>
         </Typography>
-        <Typography>
+        <Typography align="center">
           <Link href="/" className={classes.link}>
             About
           </Link>
+          <Link href="/blog" className={classes.link}>
+            Tech Blog
+          </Link>          
           <Link href="/ocean" className={classes.link}>
-            Underwater blog
+            Ocean
           </Link>
           <Link href="" className={classes.link}>
             Contacts
           </Link>
         </Typography>
-      </Container>
+        <Divider />
+      {/* </Container> */}
+    </div>
     </React.Fragment>    
   );
 }

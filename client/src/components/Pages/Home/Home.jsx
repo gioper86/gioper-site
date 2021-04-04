@@ -30,15 +30,6 @@ const Ocean = () => {
     <React.Fragment>
       <CssBaseline />
       <Header />
-      <div className={classes.heroImage}>
-        <Container maxWidth="md">
-          <div className={classes.heroTitle}>
-            <Typography component="h6" variant="h6">Home</Typography>
-            <Typography component="subtitle2" align="center">
-            </Typography>
-          </div>
-        </Container>
-      </div>
       Home
     </React.Fragment>    
   );
