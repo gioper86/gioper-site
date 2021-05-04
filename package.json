@@ -18,5 +18,6 @@
   "homepage": "https://github.com/gioper86/gioper-site#readme",
   "dependencies": {
     "express": "^4.17.1"
-  }
+  },
+  "devDependencies": {}
 }
